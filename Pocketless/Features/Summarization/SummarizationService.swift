@@ -17,7 +17,7 @@ final class SummarizationService {
         let configData = UserDefaults.standard.data(forKey: "llmConfig")
         let config = configData.flatMap { try? JSONDecoder().decode(LLMConfig.self, from: $0) } ?? LLMConfig()
 
-        guard let client = config.makeClient() else {
+        guard let provider = config.makeProvider() else {
             throw APIError.unauthorized
         }
 
@@ -39,7 +39,7 @@ final class SummarizationService {
         ---
         """
 
-        let content = try await client.chatCompletion(
+        let content = try await provider.chatCompletion(
             model: config.modelName,
             systemPrompt: fullPrompt,
             userMessage: "Please summarize the transcript above.",

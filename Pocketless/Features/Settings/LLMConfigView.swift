@@ -8,31 +8,50 @@ struct LLMConfigView: View {
 
     var body: some View {
         Form {
-            Section("Endpoint") {
-                TextField("Base URL", text: $config.baseURL)
-                    .keyboardType(.URL)
-                    .autocapitalization(.none)
+            Section("Provider") {
+                Picker("Provider", selection: $config.providerType) {
+                    ForEach(LLMProviderType.allCases) { provider in
+                        Text(provider.displayName).tag(provider)
+                    }
+                }
+                .onChange(of: config.providerType) { _, newValue in
+                    config.baseURL = newValue.defaultBaseURL
+                    config.modelName = newValue.defaultModel
+                    testResult = nil
+                }
+            }
 
-                Text("Default: OpenRouter (https://openrouter.ai/api/v1)")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+            Section("Endpoint") {
+                if config.providerType == .custom {
+                    TextField("Base URL", text: $config.baseURL)
+                        .keyboardType(.URL)
+                        .autocapitalization(.none)
+                } else {
+                    LabeledContent("Base URL", value: config.baseURL)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             Section("Authentication") {
                 SecureField("API Key", text: $apiKeyInput)
                     .autocapitalization(.none)
 
-                Link("Get an OpenRouter API key", destination: URL(string: "https://openrouter.ai/keys")!)
-                    .font(.caption)
+                if let keyURL = config.providerType.keyURL,
+                   let url = URL(string: keyURL) {
+                    Link("Get a \(config.providerType.displayName) API key", destination: url)
+                        .font(.caption)
+                }
             }
 
             Section("Model") {
                 TextField("Model Name", text: $config.modelName)
                     .autocapitalization(.none)
 
-                Text("Default: anthropic/claude-sonnet-4-20250514")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                if config.providerType != .custom {
+                    Text("Default: \(config.providerType.defaultModel)")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
 
                 Stepper("Max Tokens: \(config.maxTokens)", value: $config.maxTokens, in: 256...16384, step: 256)
             }
@@ -86,15 +105,18 @@ struct LLMConfigView: View {
         isTesting = true
         defer { isTesting = false }
 
-        guard let url = URL(string: config.baseURL) else {
-            testResult = "Invalid URL"
+        // Temporarily save key so makeProvider() can find it
+        if !apiKeyInput.isEmpty {
+            try? KeychainService.save(key: LLMConfig.keychainKey, value: apiKeyInput)
+        }
+
+        guard let provider = config.makeProvider() else {
+            testResult = "Invalid URL or missing API key"
             return
         }
 
-        let client = OpenAICompatibleClient(baseURL: url, apiKey: apiKeyInput)
-
         do {
-            let response = try await client.chatCompletion(
+            let response = try await provider.chatCompletion(
                 model: config.modelName,
                 systemPrompt: "Respond with exactly: OK",
                 userMessage: "Test",

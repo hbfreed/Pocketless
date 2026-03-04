@@ -199,10 +199,56 @@ struct STTConfig: Codable {
     }
 }
 
+enum LLMProviderType: String, Codable, CaseIterable, Identifiable {
+    case openRouter
+    case openAI
+    case anthropic
+    case custom
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .openRouter: return "OpenRouter"
+        case .openAI: return "OpenAI"
+        case .anthropic: return "Anthropic"
+        case .custom: return "Custom"
+        }
+    }
+
+    var defaultBaseURL: String {
+        switch self {
+        case .openRouter: return "https://openrouter.ai/api/v1"
+        case .openAI: return "https://api.openai.com/v1"
+        case .anthropic: return "https://api.anthropic.com"
+        case .custom: return ""
+        }
+    }
+
+    var defaultModel: String {
+        switch self {
+        case .openRouter: return "anthropic/claude-sonnet-4-20250514"
+        case .openAI: return "gpt-4o"
+        case .anthropic: return "claude-sonnet-4-20250514"
+        case .custom: return ""
+        }
+    }
+
+    var keyURL: String? {
+        switch self {
+        case .openRouter: return "https://openrouter.ai/keys"
+        case .openAI: return "https://platform.openai.com/api-keys"
+        case .anthropic: return "https://console.anthropic.com/settings/keys"
+        case .custom: return nil
+        }
+    }
+}
+
 struct LLMConfig: Codable {
-    var baseURL: String = "https://openrouter.ai/api/v1"
+    var providerType: LLMProviderType = .openRouter
+    var baseURL: String = LLMProviderType.openRouter.defaultBaseURL
     var apiKeyKeychainKey: String = LLMConfig.keychainKey
-    var modelName: String = "anthropic/claude-sonnet-4-20250514"
+    var modelName: String = LLMProviderType.openRouter.defaultModel
     var maxTokens: Int = 4096
 
     static let keychainKey = "llm_api_key"
@@ -215,5 +261,17 @@ struct LLMConfig: Codable {
         guard let url = URL(string: baseURL),
               let apiKey = resolvedAPIKey else { return nil }
         return OpenAICompatibleClient(baseURL: url, apiKey: apiKey)
+    }
+
+    func makeProvider() -> (any LLMProvider)? {
+        guard let apiKey = resolvedAPIKey else { return nil }
+        switch providerType {
+        case .anthropic:
+            guard let url = URL(string: baseURL) else { return nil }
+            return AnthropicClient(baseURL: url, apiKey: apiKey)
+        case .openRouter, .openAI, .custom:
+            guard let url = URL(string: baseURL) else { return nil }
+            return OpenAICompatibleClient(baseURL: url, apiKey: apiKey)
+        }
     }
 }

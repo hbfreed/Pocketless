@@ -7,7 +7,7 @@ final class TranscriptCleanup {
         let configData = UserDefaults.standard.data(forKey: "llmConfig")
         let config = configData.flatMap { try? JSONDecoder().decode(LLMConfig.self, from: $0) } ?? LLMConfig()
 
-        guard let client = config.makeClient() else {
+        guard let provider = config.makeProvider() else {
             throw APIError.unauthorized
         }
 
@@ -16,7 +16,7 @@ final class TranscriptCleanup {
         var cleanedParts: [String] = []
 
         for chunk in chunks {
-            let cleaned = try await client.chatCompletion(
+            let cleaned = try await provider.chatCompletion(
                 model: config.modelName,
                 systemPrompt: CleanupPrompt.systemPrompt,
                 userMessage: chunk

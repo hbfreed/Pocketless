@@ -11,6 +11,7 @@
 		0C9F3189679EEFB4714586A2 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B270E6EB3F5A63F2F120911 /* LibraryView.swift */; };
 		1E95AE808C1D5A81ED66CEF9 /* LLMConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D377A7A0220D4A728F389E /* LLMConfigView.swift */; };
 		2DAFAB0B646FE109F293DCCC /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A1CF52689796FE3F585B3 /* ExportView.swift */; };
+		4381B0F66272D0256FD4B9A6 /* AnthropicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563703DC8544263FDC218BE4 /* AnthropicClient.swift */; };
 		4BEAFAC1AABF26C7E3009ACE /* CloudSTTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3642C7822037631D2FEB6 /* CloudSTTService.swift */; };
 		501C9A5720D1F0141B44466E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18219E9F6E6B60D205D5797 /* Summary.swift */; };
 		503144FE31D21983D410D62B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B80D3498C53AA415E85324 /* ContentView.swift */; };
@@ -26,6 +27,7 @@
 		95A04A1F123395A29D8BA778 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89DBB52E3CBC2DCC2CB146 /* SettingsView.swift */; };
 		965561B6F3D6A873C0FB984A /* OpenAICompatibleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC211CDBE2017D51843F334 /* OpenAICompatibleClient.swift */; };
 		96B4432CF067CC0D38A8265F /* SummaryPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE9D57BAB0DFE5F20BA883B /* SummaryPresets.swift */; };
+		9886BCED1C8EF2314A330F2F /* LLMProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B746DB649246D783F0FACC0B /* LLMProvider.swift */; };
 		B38492FE4A581D5F553A2E3B /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584AF426223BBB25087D411 /* KeychainService.swift */; };
 		C2137CF88E7EB8BA216D13AE /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52BA24DB6322DF880C48CA16 /* WhisperKit */; };
 		DD4651559FD3B5BEFBD13C45 /* STTConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551B44A051B14349879CA54 /* STTConfigView.swift */; };
@@ -50,6 +52,7 @@
 		4FDDDA0525ABD206989443BA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		50D4ADAA15213BD798A75208 /* SummaryPresets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SummaryPresets.json; sourceTree = "<group>"; };
 		527AFE9F80F2C1C13B5AE89F /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		563703DC8544263FDC218BE4 /* AnthropicClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnthropicClient.swift; sourceTree = "<group>"; };
 		6AC211CDBE2017D51843F334 /* OpenAICompatibleClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompatibleClient.swift; sourceTree = "<group>"; };
 		6BE9D57BAB0DFE5F20BA883B /* SummaryPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPresets.swift; sourceTree = "<group>"; };
 		78169C7F64D2E6BE195D2F7F /* TranscriptCleanup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptCleanup.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		9DD93FA40171DD8857EDC634 /* Pocketless.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Pocketless.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F7B43B0E0DB1063A357283E /* PocketlessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketlessApp.swift; sourceTree = "<group>"; };
 		A18219E9F6E6B60D205D5797 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		B746DB649246D783F0FACC0B /* LLMProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMProvider.swift; sourceTree = "<group>"; };
 		BB1B8791563BF68F459A0BF8 /* CleanupPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanupPrompt.swift; sourceTree = "<group>"; };
 		C589AC8573549BB292F54F9C /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		DF143EBAF7AB32FDAE134F94 /* RecordingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDetailView.swift; sourceTree = "<group>"; };
@@ -116,7 +120,9 @@
 		766B9DBF054F488B630B4D4B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				563703DC8544263FDC218BE4 /* AnthropicClient.swift */,
 				2584AF426223BBB25087D411 /* KeychainService.swift */,
+				B746DB649246D783F0FACC0B /* LLMProvider.swift */,
 				6AC211CDBE2017D51843F334 /* OpenAICompatibleClient.swift */,
 			);
 			path = Services;
@@ -304,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4381B0F66272D0256FD4B9A6 /* AnthropicClient.swift in Sources */,
 				663866EC646FE71FF3AC6162 /* AudioRecorder.swift in Sources */,
 				E08FC61715C1FAB68A372FD5 /* CleanupPrompt.swift in Sources */,
 				4BEAFAC1AABF26C7E3009ACE /* CloudSTTService.swift in Sources */,
@@ -311,6 +318,7 @@
 				2DAFAB0B646FE109F293DCCC /* ExportView.swift in Sources */,
 				B38492FE4A581D5F553A2E3B /* KeychainService.swift in Sources */,
 				1E95AE808C1D5A81ED66CEF9 /* LLMConfigView.swift in Sources */,
+				9886BCED1C8EF2314A330F2F /* LLMProvider.swift in Sources */,
 				0C9F3189679EEFB4714586A2 /* LibraryView.swift in Sources */,
 				614B98A88781F2F232F87249 /* OnboardingView.swift in Sources */,
 				965561B6F3D6A873C0FB984A /* OpenAICompatibleClient.swift in Sources */,
