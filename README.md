@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="pocketless.png" alt="Pocketless" width="300">
+  <img src="assets/logo.png" alt="Pocketless" width="300">
 </p>
 
 <h1 align="center">Pocketless</h1>
