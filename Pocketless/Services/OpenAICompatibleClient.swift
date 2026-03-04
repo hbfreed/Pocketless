@@ -229,7 +229,7 @@ enum LLMProviderType: String, Codable, CaseIterable, Identifiable {
         switch self {
         case .openRouter: return "google/gemini-3-flash-preview"
         case .openAI: return "gpt-5.2-2025-12-11"
-        case .anthropic: return "claude-sonnet-4-6-20250610"
+        case .anthropic: return "claude-sonnet-4-6-20260219"
         case .custom: return ""
         }
     }
