@@ -227,9 +227,9 @@ enum LLMProviderType: String, Codable, CaseIterable, Identifiable {
 
     var defaultModel: String {
         switch self {
-        case .openRouter: return "anthropic/claude-sonnet-4-20250514"
-        case .openAI: return "gpt-4o"
-        case .anthropic: return "claude-sonnet-4-20250514"
+        case .openRouter: return "google/gemini-3-flash-preview"
+        case .openAI: return "gpt-5.2-2025-12-11"
+        case .anthropic: return "claude-sonnet-4-6-20250610"
         case .custom: return ""
         }
     }
@@ -248,7 +248,7 @@ struct LLMConfig: Codable {
     var providerType: LLMProviderType = .openRouter
     var baseURL: String = LLMProviderType.openRouter.defaultBaseURL
     var apiKeyKeychainKey: String = LLMConfig.keychainKey
-    var modelName: String = LLMProviderType.openRouter.defaultModel
+    var modelName: String = "google/gemini-3-flash-preview"
     var maxTokens: Int = 4096
 
     static let keychainKey = "llm_api_key"
