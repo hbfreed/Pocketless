@@ -22,7 +22,7 @@
 
 ## Why
 
-Products like Plaud and Limitless sell $100–200 recording pucks with $20/month subscriptions. The "hardware" is a Bluetooth mic that syncs to a phone app where all the actual processing happens. Your phone can already do all of this.
+The [Plaud NotePin](https://www.plaud.ai/products/plaud-notepin) is a $169 recording puck with a $79–100/year subscription for AI transcription and summaries. The "hardware" is a mic that syncs to a phone app where all the actual processing happens. Your phone can already do all of this.
 
 ## Setup
 
