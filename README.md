@@ -20,10 +20,6 @@
 4. **Summarize** — Send to any OpenAI-compatible API (OpenRouter, OpenAI, Ollama, etc.)
 5. **Export** — Share as plain text, markdown, or JSON
 
-## Why
-
-The [Plaud NotePin](https://www.plaud.ai/products/plaud-notepin) is a $169 recording puck with a $79–100/year subscription for AI transcription and summaries. The "hardware" is a mic that syncs to a phone app where all the actual processing happens. Your phone can already do all of this.
-
 ## Setup
 
 - Clone and open in Xcode 15+
