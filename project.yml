@@ -1,0 +1,37 @@
+name: Pocketless
+options:
+  bundleIdPrefix: com.pocketless
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "15.0"
+  minimumXcodeGenVersion: "2.30"
+
+packages:
+  WhisperKit:
+    url: https://github.com/argmaxinc/WhisperKit
+    from: "0.9.0"
+
+targets:
+  Pocketless:
+    type: application
+    platform: iOS
+    sources:
+      - path: Pocketless
+    settings:
+      base:
+        INFOPLIST_FILE: Pocketless/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.pocketless.app
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "5.9"
+        DEVELOPMENT_TEAM: ""
+    dependencies:
+      - package: WhisperKit
+    info:
+      path: Pocketless/Info.plist
+      properties:
+        NSMicrophoneUsageDescription: "Pocketless needs microphone access to record conversations for transcription and summarization."
+        UIBackgroundModes:
+          - audio
+        CFBundleDisplayName: Pocketless
+        UILaunchScreen: {}

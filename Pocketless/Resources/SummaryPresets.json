@@ -1,0 +1,26 @@
+[
+    {
+        "id": "quick",
+        "name": "Quick",
+        "description": "3-5 bullet points, just the highlights",
+        "systemPrompt": "Summarize this transcript into 3-5 concise bullet points covering only the key highlights."
+    },
+    {
+        "id": "detailed",
+        "name": "Detailed",
+        "description": "Thorough structured notes with decisions and action items",
+        "systemPrompt": "Create thorough structured notes from this transcript. Include: key discussion points, decisions made, action items with owners if mentioned, and any open questions."
+    },
+    {
+        "id": "casual",
+        "name": "Casual",
+        "description": "Conversational recap, like telling a friend",
+        "systemPrompt": "Give a casual, conversational recap of this transcript. Write it like you're telling a friend what happened. Keep it natural and easy to read."
+    },
+    {
+        "id": "pedantic",
+        "name": "Pedantic",
+        "description": "Exhaustive, nothing omitted, with timestamps",
+        "systemPrompt": "Create an exhaustive summary of this transcript. Nothing should be omitted. Include timestamps referencing the transcript. Organize by topic and subtopic."
+    }
+]

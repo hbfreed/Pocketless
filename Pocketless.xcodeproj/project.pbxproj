@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05935B4E374F916012C1C975 /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFCA526809FF69EA8375778 /* Recording.swift */; };
+		0C9F3189679EEFB4714586A2 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B270E6EB3F5A63F2F120911 /* LibraryView.swift */; };
+		1E95AE808C1D5A81ED66CEF9 /* LLMConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D377A7A0220D4A728F389E /* LLMConfigView.swift */; };
+		2DAFAB0B646FE109F293DCCC /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A1CF52689796FE3F585B3 /* ExportView.swift */; };
+		4BEAFAC1AABF26C7E3009ACE /* CloudSTTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3642C7822037631D2FEB6 /* CloudSTTService.swift */; };
+		501C9A5720D1F0141B44466E /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18219E9F6E6B60D205D5797 /* Summary.swift */; };
+		503144FE31D21983D410D62B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B80D3498C53AA415E85324 /* ContentView.swift */; };
+		506F56EEE3C7E15BD60C3D87 /* PocketlessApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B43B0E0DB1063A357283E /* PocketlessApp.swift */; };
+		59DBF141664F7F2A489328E1 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9389D649C3C0CF21B0E2879 /* WaveformView.swift */; };
+		5BB2C5925FF072711E60A3F2 /* RecordingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF143EBAF7AB32FDAE134F94 /* RecordingDetailView.swift */; };
+		614B98A88781F2F232F87249 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDDDA0525ABD206989443BA /* OnboardingView.swift */; };
+		663866EC646FE71FF3AC6162 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C589AC8573549BB292F54F9C /* AudioRecorder.swift */; };
+		6E030F9D26F52A2AE2D7AD01 /* PresetPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E886F10CA6A191330D1F5275 /* PresetPickerView.swift */; };
+		744F1EFBFDC4E211A8497747 /* TranscriptCleanup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78169C7F64D2E6BE195D2F7F /* TranscriptCleanup.swift */; };
+		7617C8B5F4DA137439C2F7D7 /* TranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44FF79F4A9CB0D86C2D780B /* TranscriptionService.swift */; };
+		95272D8497F4CDA47AA36748 /* Transcript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D812068843D2E7AB8D1DF18 /* Transcript.swift */; };
+		95A04A1F123395A29D8BA778 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E89DBB52E3CBC2DCC2CB146 /* SettingsView.swift */; };
+		965561B6F3D6A873C0FB984A /* OpenAICompatibleClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC211CDBE2017D51843F334 /* OpenAICompatibleClient.swift */; };
+		96B4432CF067CC0D38A8265F /* SummaryPresets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE9D57BAB0DFE5F20BA883B /* SummaryPresets.swift */; };
+		B38492FE4A581D5F553A2E3B /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584AF426223BBB25087D411 /* KeychainService.swift */; };
+		C2137CF88E7EB8BA216D13AE /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52BA24DB6322DF880C48CA16 /* WhisperKit */; };
+		DD4651559FD3B5BEFBD13C45 /* STTConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551B44A051B14349879CA54 /* STTConfigView.swift */; };
+		DFC8CBBD86DB63BC9DB6CF55 /* SummarizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA187DC0D88A4F9E8C6365E /* SummarizationService.swift */; };
+		E08FC61715C1FAB68A372FD5 /* CleanupPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B8791563BF68F459A0BF8 /* CleanupPrompt.swift */; };
+		E5E21F79B812520F18F60B3A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AFE9F80F2C1C13B5AE89F /* RecordingView.swift */; };
+		F5034A6C3730E8BFF67D4FF9 /* SummaryPresets.json in Resources */ = {isa = PBXBuildFile; fileRef = 50D4ADAA15213BD798A75208 /* SummaryPresets.json */; };
+		F8C863822A3454EDCCEBA984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0477B21F704698EA245EAA3F /* Assets.xcassets */; };
+		FFACCD6E243BDE6DD2EC8918 /* WhisperKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F55739349105818A9AA7B2B /* WhisperKitService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01B3642C7822037631D2FEB6 /* CloudSTTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudSTTService.swift; sourceTree = "<group>"; };
+		0477B21F704698EA245EAA3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07002FA44107FE2DF5BC3356 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1D812068843D2E7AB8D1DF18 /* Transcript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcript.swift; sourceTree = "<group>"; };
+		1E89DBB52E3CBC2DCC2CB146 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1F55739349105818A9AA7B2B /* WhisperKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperKitService.swift; sourceTree = "<group>"; };
+		20B80D3498C53AA415E85324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2551B44A051B14349879CA54 /* STTConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STTConfigView.swift; sourceTree = "<group>"; };
+		2584AF426223BBB25087D411 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		4FDDDA0525ABD206989443BA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		50D4ADAA15213BD798A75208 /* SummaryPresets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SummaryPresets.json; sourceTree = "<group>"; };
+		527AFE9F80F2C1C13B5AE89F /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		6AC211CDBE2017D51843F334 /* OpenAICompatibleClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompatibleClient.swift; sourceTree = "<group>"; };
+		6BE9D57BAB0DFE5F20BA883B /* SummaryPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPresets.swift; sourceTree = "<group>"; };
+		78169C7F64D2E6BE195D2F7F /* TranscriptCleanup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptCleanup.swift; sourceTree = "<group>"; };
+		812A1CF52689796FE3F585B3 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		82D377A7A0220D4A728F389E /* LLMConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMConfigView.swift; sourceTree = "<group>"; };
+		8B270E6EB3F5A63F2F120911 /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		9AA187DC0D88A4F9E8C6365E /* SummarizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummarizationService.swift; sourceTree = "<group>"; };
+		9AFCA526809FF69EA8375778 /* Recording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		9DD93FA40171DD8857EDC634 /* Pocketless.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Pocketless.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F7B43B0E0DB1063A357283E /* PocketlessApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketlessApp.swift; sourceTree = "<group>"; };
+		A18219E9F6E6B60D205D5797 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		BB1B8791563BF68F459A0BF8 /* CleanupPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanupPrompt.swift; sourceTree = "<group>"; };
+		C589AC8573549BB292F54F9C /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		DF143EBAF7AB32FDAE134F94 /* RecordingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDetailView.swift; sourceTree = "<group>"; };
+		E886F10CA6A191330D1F5275 /* PresetPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetPickerView.swift; sourceTree = "<group>"; };
+		F44FF79F4A9CB0D86C2D780B /* TranscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionService.swift; sourceTree = "<group>"; };
+		F9389D649C3C0CF21B0E2879 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C75247CCDB867A9504C206E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2137CF88E7EB8BA216D13AE /* WhisperKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BED1C6ADCB0740C79B28799 /* Pocketless */ = {
+			isa = PBXGroup;
+			children = (
+				0477B21F704698EA245EAA3F /* Assets.xcassets */,
+				07002FA44107FE2DF5BC3356 /* Info.plist */,
+				6866B0925DE20F802BABE5FF /* App */,
+				B63598E248D579D5EEC4A506 /* Features */,
+				BDEE5420E3CD39CFD31A9676 /* Models */,
+				99B1F58CCDB16360228DAC6C /* Resources */,
+				766B9DBF054F488B630B4D4B /* Services */,
+			);
+			path = Pocketless;
+			sourceTree = "<group>";
+		};
+		5073948564747834467D9253 /* Cleanup */ = {
+			isa = PBXGroup;
+			children = (
+				BB1B8791563BF68F459A0BF8 /* CleanupPrompt.swift */,
+				78169C7F64D2E6BE195D2F7F /* TranscriptCleanup.swift */,
+			);
+			path = Cleanup;
+			sourceTree = "<group>";
+		};
+		6866B0925DE20F802BABE5FF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				20B80D3498C53AA415E85324 /* ContentView.swift */,
+				9F7B43B0E0DB1063A357283E /* PocketlessApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		766B9DBF054F488B630B4D4B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2584AF426223BBB25087D411 /* KeychainService.swift */,
+				6AC211CDBE2017D51843F334 /* OpenAICompatibleClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		964B3C346FB011B19994657D /* Summarization */ = {
+			isa = PBXGroup;
+			children = (
+				9AA187DC0D88A4F9E8C6365E /* SummarizationService.swift */,
+				6BE9D57BAB0DFE5F20BA883B /* SummaryPresets.swift */,
+			);
+			path = Summarization;
+			sourceTree = "<group>";
+		};
+		966530D30ED6EED790B96214 /* Transcription */ = {
+			isa = PBXGroup;
+			children = (
+				01B3642C7822037631D2FEB6 /* CloudSTTService.swift */,
+				F44FF79F4A9CB0D86C2D780B /* TranscriptionService.swift */,
+				1F55739349105818A9AA7B2B /* WhisperKitService.swift */,
+			);
+			path = Transcription;
+			sourceTree = "<group>";
+		};
+		99B1F58CCDB16360228DAC6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50D4ADAA15213BD798A75208 /* SummaryPresets.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9A4287A331BD041E33CF03F9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				82D377A7A0220D4A728F389E /* LLMConfigView.swift */,
+				1E89DBB52E3CBC2DCC2CB146 /* SettingsView.swift */,
+				2551B44A051B14349879CA54 /* STTConfigView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B63598E248D579D5EEC4A506 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				5073948564747834467D9253 /* Cleanup */,
+				D74F9DFCBDF4B72916BD9BA5 /* Library */,
+				E0FF6ECB34CB4B55F317E98C /* Onboarding */,
+				E251B03B9B4F1215F61A053A /* Recording */,
+				9A4287A331BD041E33CF03F9 /* Settings */,
+				964B3C346FB011B19994657D /* Summarization */,
+				966530D30ED6EED790B96214 /* Transcription */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		BDEE5420E3CD39CFD31A9676 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9AFCA526809FF69EA8375778 /* Recording.swift */,
+				A18219E9F6E6B60D205D5797 /* Summary.swift */,
+				1D812068843D2E7AB8D1DF18 /* Transcript.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C9F62924CBC3C92451F8F6C8 = {
+			isa = PBXGroup;
+			children = (
+				3BED1C6ADCB0740C79B28799 /* Pocketless */,
+				E579FF5B6CADB7C949C26989 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D74F9DFCBDF4B72916BD9BA5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				812A1CF52689796FE3F585B3 /* ExportView.swift */,
+				8B270E6EB3F5A63F2F120911 /* LibraryView.swift */,
+				E886F10CA6A191330D1F5275 /* PresetPickerView.swift */,
+				DF143EBAF7AB32FDAE134F94 /* RecordingDetailView.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		E0FF6ECB34CB4B55F317E98C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4FDDDA0525ABD206989443BA /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		E251B03B9B4F1215F61A053A /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				C589AC8573549BB292F54F9C /* AudioRecorder.swift */,
+				527AFE9F80F2C1C13B5AE89F /* RecordingView.swift */,
+				F9389D649C3C0CF21B0E2879 /* WaveformView.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		E579FF5B6CADB7C949C26989 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9DD93FA40171DD8857EDC634 /* Pocketless.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77370669772A0CB016720E37 /* Pocketless */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D058845E990FA49C534CFF1 /* Build configuration list for PBXNativeTarget "Pocketless" */;
+			buildPhases = (
+				A251BE27DEA166A3AF6192D0 /* Sources */,
+				E6C4270509F8F897BC86714D /* Resources */,
+				3C75247CCDB867A9504C206E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pocketless;
+			packageProductDependencies = (
+				52BA24DB6322DF880C48CA16 /* WhisperKit */,
+			);
+			productName = Pocketless;
+			productReference = 9DD93FA40171DD8857EDC634 /* Pocketless.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66B245AFF9391086190D54AE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					77370669772A0CB016720E37 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 863AF5C7683EC5526F257C15 /* Build configuration list for PBXProject "Pocketless" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = C9F62924CBC3C92451F8F6C8;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E060B3A8E500123A7BB0C903 /* XCRemoteSwiftPackageReference "WhisperKit" */,
+			);
+			preferredProjectObjectVersion = 77;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77370669772A0CB016720E37 /* Pocketless */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6C4270509F8F897BC86714D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C863822A3454EDCCEBA984 /* Assets.xcassets in Resources */,
+				F5034A6C3730E8BFF67D4FF9 /* SummaryPresets.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A251BE27DEA166A3AF6192D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663866EC646FE71FF3AC6162 /* AudioRecorder.swift in Sources */,
+				E08FC61715C1FAB68A372FD5 /* CleanupPrompt.swift in Sources */,
+				4BEAFAC1AABF26C7E3009ACE /* CloudSTTService.swift in Sources */,
+				503144FE31D21983D410D62B /* ContentView.swift in Sources */,
+				2DAFAB0B646FE109F293DCCC /* ExportView.swift in Sources */,
+				B38492FE4A581D5F553A2E3B /* KeychainService.swift in Sources */,
+				1E95AE808C1D5A81ED66CEF9 /* LLMConfigView.swift in Sources */,
+				0C9F3189679EEFB4714586A2 /* LibraryView.swift in Sources */,
+				614B98A88781F2F232F87249 /* OnboardingView.swift in Sources */,
+				965561B6F3D6A873C0FB984A /* OpenAICompatibleClient.swift in Sources */,
+				506F56EEE3C7E15BD60C3D87 /* PocketlessApp.swift in Sources */,
+				6E030F9D26F52A2AE2D7AD01 /* PresetPickerView.swift in Sources */,
+				05935B4E374F916012C1C975 /* Recording.swift in Sources */,
+				5BB2C5925FF072711E60A3F2 /* RecordingDetailView.swift in Sources */,
+				E5E21F79B812520F18F60B3A /* RecordingView.swift in Sources */,
+				DD4651559FD3B5BEFBD13C45 /* STTConfigView.swift in Sources */,
+				95A04A1F123395A29D8BA778 /* SettingsView.swift in Sources */,
+				DFC8CBBD86DB63BC9DB6CF55 /* SummarizationService.swift in Sources */,
+				501C9A5720D1F0141B44466E /* Summary.swift in Sources */,
+				96B4432CF067CC0D38A8265F /* SummaryPresets.swift in Sources */,
+				95272D8497F4CDA47AA36748 /* Transcript.swift in Sources */,
+				744F1EFBFDC4E211A8497747 /* TranscriptCleanup.swift in Sources */,
+				7617C8B5F4DA137439C2F7D7 /* TranscriptionService.swift in Sources */,
+				59DBF141664F7F2A489328E1 /* WaveformView.swift in Sources */,
+				FFACCD6E243BDE6DD2EC8918 /* WhisperKitService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3B368C721E5A96CC41A45990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3F422CCAB167E4A46992B64D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Pocketless/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketless.app;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CBE69AC99B4E1B104EBE6D12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = Pocketless/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pocketless.app;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8282D8EB39E3C75322E4036 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D058845E990FA49C534CFF1 /* Build configuration list for PBXNativeTarget "Pocketless" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE69AC99B4E1B104EBE6D12 /* Debug */,
+				3F422CCAB167E4A46992B64D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		863AF5C7683EC5526F257C15 /* Build configuration list for PBXProject "Pocketless" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B368C721E5A96CC41A45990 /* Debug */,
+				F8282D8EB39E3C75322E4036 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E060B3A8E500123A7BB0C903 /* XCRemoteSwiftPackageReference "WhisperKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argmaxinc/WhisperKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52BA24DB6322DF880C48CA16 /* WhisperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E060B3A8E500123A7BB0C903 /* XCRemoteSwiftPackageReference "WhisperKit" */;
+			productName = WhisperKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 66B245AFF9391086190D54AE /* Project object */;
+}
