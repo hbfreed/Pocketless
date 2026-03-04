@@ -53,7 +53,7 @@ struct SettingsView: View {
                             .foregroundStyle(.secondary)
                     }
 
-                    Link("Source Code", destination: URL(string: "https://github.com")!)
+                    Link("Source Code", destination: URL(string: "https://github.com/hbfreed/Pocketless")!)
                 }
             }
             .navigationTitle("Settings")
