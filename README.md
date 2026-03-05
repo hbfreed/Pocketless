@@ -48,7 +48,9 @@ If there's interest, I'll get this on the App Store, though there are lots of ap
 
 ## Built With
 
-The app was built with [Claude Code](https://claude.ai/claude-code). The transcription quality work — model selection, hallucination filtering, cleanup prompt design, and the overall pipeline architecture — was a hands-on collaboration. I really wanted the transcriptions to be good and not a slapdash "throw everything at an LLM"; the model choices are not an accident, I did comparisons of a few models. That's definitely the most interesting part of this project, it's a surpisingly hard problem. I'd like to refine everything to be a little more quantitative, but I did a few non-vibes based evaluations.
+Getting transcriptions right is the most interesting part of this project and I put extra love into it accordingly. I really wanted them to be good and not a slapdash "throw everything at an LLM". The model choices are not an accident: I did comparisons of a few models and a few non-vibes-based evaluations. I'd like to make it all more quantitative eventually.
+
+The app was built with [Claude Code](https://claude.ai/claude-code). The transcription quality work — model selection, hallucination filtering, cleanup prompt design, and the pipeline architecture — was a hands-on collaboration.
 
 ## License
 
