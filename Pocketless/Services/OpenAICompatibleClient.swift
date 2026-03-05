@@ -39,7 +39,7 @@ struct OpenAICompatibleClient {
         model: String,
         systemPrompt: String,
         userMessage: String,
-        maxTokens: Int = 4096,
+        maxTokens: Int = 8192,
         temperature: Double = 0.3
     ) async throws -> String {
         let url = baseURL.appendingPathComponent("chat/completions")
@@ -229,7 +229,7 @@ enum LLMProviderType: String, Codable, CaseIterable, Identifiable {
 
     var defaultModel: String {
         switch self {
-        case .openRouter: return "google/gemini-3-flash-preview"
+        case .openRouter: return "google/gemini-3.1-flash-lite-preview"
         case .openAI: return "gpt-5.2-2025-12-11"
         case .anthropic: return "claude-sonnet-4-6-20260219"
         case .custom: return ""
@@ -250,8 +250,8 @@ struct LLMConfig: Codable {
     var providerType: LLMProviderType = .openRouter
     var baseURL: String = LLMProviderType.openRouter.defaultBaseURL
     var apiKeyKeychainKey: String = LLMConfig.keychainKey
-    var modelName: String = "google/gemini-3-flash-preview"
-    var maxTokens: Int = 4096
+    var modelName: String = "google/gemini-3.1-flash-lite-preview"
+    var maxTokens: Int = 8192
 
     static let keychainKey = "llm_api_key"
 

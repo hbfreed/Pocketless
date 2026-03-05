@@ -110,6 +110,18 @@ struct SettingsView: View {
     }
 
     private func clearRecordings() {
+        // Delete SwiftData objects
+        do {
+            let recordings = try modelContext.fetch(FetchDescriptor<Recording>())
+            for recording in recordings {
+                modelContext.delete(recording)
+            }
+            try modelContext.save()
+        } catch {
+            // Continue to file cleanup even if DB delete fails
+        }
+
+        // Delete audio files from disk
         let docs = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let recordingsDir = docs.appendingPathComponent("Recordings")
         try? FileManager.default.removeItem(at: recordingsDir)
