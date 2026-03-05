@@ -44,11 +44,11 @@ Getting good transcriptions on a phone is harder than it looks. Here's what went
 
 ## App Store
 
-If there's interest, I'll get this on the App Store. Open an issue or star the repo to let me know.
+If there's interest, I'll get this on the App Store, though there are lots of apps just like it. Open an issue or star the repo to let me know.
 
 ## Built With
 
-The app was built with [Claude Code](https://claude.ai/claude-code). The transcription quality work — model selection, hallucination filtering, cleanup prompt design, and the overall pipeline architecture — was a hands-on collaboration.
+The app was built with [Claude Code](https://claude.ai/claude-code). The transcription quality work — model selection, hallucination filtering, cleanup prompt design, and the overall pipeline architecture — was a hands-on collaboration. I really wanted the transcriptions to be good and not a slapdash "throw everything at an LLM"; the model choices are not an accident, I did comparisons of a few models. That's definitely the most interesting part of this project, it's a surpisingly hard problem. I'd like to refine everything to be a little more quantitative, but I did a few non-vibes based evaluations.
 
 ## License
 
