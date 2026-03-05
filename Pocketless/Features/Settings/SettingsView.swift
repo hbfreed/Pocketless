@@ -1,10 +1,16 @@
 import SwiftUI
+import SwiftData
 
 struct SettingsView: View {
     @AppStorage("cleanupEnabled") private var cleanupEnabled = true
     @AppStorage("autoSummarize") private var autoSummarize = false
     @AppStorage("defaultPreset") private var defaultPreset = "fast"
     @State private var storageUsage: String = "Calculating..."
+    @Environment(\.modelContext) private var modelContext
+    #if DEBUG
+    @State private var testTranscriptLoaded = false
+    @State private var testTranscriptError: String?
+    #endif
 
     var body: some View {
         NavigationStack {
@@ -38,6 +44,31 @@ struct SettingsView: View {
                         clearRecordings()
                     }
                 }
+
+                #if DEBUG
+                Section("Debug") {
+                    Button("Load Test Transcript") {
+                        do {
+                            try TestTranscriptLoader.loadTestRecording(context: modelContext)
+                            testTranscriptLoaded = true
+                        } catch {
+                            testTranscriptError = error.localizedDescription
+                        }
+                    }
+                    .disabled(testTranscriptLoaded)
+
+                    if testTranscriptLoaded {
+                        Text("Test transcript loaded!")
+                            .foregroundStyle(.green)
+                            .font(.caption)
+                    }
+                    if let error = testTranscriptError {
+                        Text(error)
+                            .foregroundStyle(.red)
+                            .font(.caption)
+                    }
+                }
+                #endif
 
                 Section("About") {
                     HStack {

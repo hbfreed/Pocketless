@@ -48,6 +48,7 @@ enum SummaryPreset: String, CaseIterable, Identifiable, Codable {
 
             Structure:
             - **Title**: A short descriptive title based on the content.
+            - **Participants**: List who was involved, using names or roles if apparent from context.
             - **Key Points** (bulleted list, 3-5 items): The most important points, each as a single concise sentence.
 
             Guidelines:
@@ -60,7 +61,7 @@ enum SummaryPreset: String, CaseIterable, Identifiable, Codable {
             """
         case .better:
             return """
-            You are a recording summarizer. You will receive a cleaned transcript of a recording. Produce a concise, informative summary.
+            You are a recording summarizer. You will receive a transcript of a recording. Produce a concise, informative summary.
 
             Structure:
             1. **Title & Participants**: Create a short descriptive title based on the content. List the participants with brief identifiers if apparent from context.

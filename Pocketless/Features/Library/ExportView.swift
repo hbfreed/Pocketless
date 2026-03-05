@@ -73,7 +73,18 @@ struct ExportView: View {
         text += "Duration: \(recording.formattedDuration)\n\n"
 
         if let transcript = recording.cleanTranscript ?? recording.rawTranscript {
-            text += "TRANSCRIPT\n\(transcript.fullText)\n\n"
+            text += "TRANSCRIPT\n"
+            let segments = transcript.segments
+            if segments.count > 1 {
+                for segment in segments {
+                    let timestamp = formatTimestamp(segment.startTime)
+                    let speaker = segment.speaker.map { "\($0): " } ?? ""
+                    text += "[\(timestamp)] \(speaker)\(segment.text)\n"
+                }
+            } else {
+                text += transcript.fullText
+            }
+            text += "\n"
         }
 
         for summary in recording.summaries {
@@ -88,7 +99,17 @@ struct ExportView: View {
         text += "**Duration:** \(recording.formattedDuration)\n\n"
 
         if let transcript = recording.cleanTranscript ?? recording.rawTranscript {
-            text += "## Transcript\n\n\(transcript.fullText)\n\n"
+            text += "## Transcript\n\n"
+            let segments = transcript.segments
+            if segments.count > 1 {
+                for segment in segments {
+                    let timestamp = formatTimestamp(segment.startTime)
+                    let speaker = segment.speaker.map { "**\($0):** " } ?? ""
+                    text += "`\(timestamp)` \(speaker)\(segment.text)\n\n"
+                }
+            } else {
+                text += "\(transcript.fullText)\n\n"
+            }
         }
 
         for summary in recording.summaries {
@@ -106,6 +127,20 @@ struct ExportView: View {
 
         if let transcript = recording.cleanTranscript ?? recording.rawTranscript {
             dict["transcript"] = transcript.fullText
+            let segments = transcript.segments
+            if segments.count > 1 {
+                dict["segments"] = segments.map { segment in
+                    var segDict: [String: Any] = [
+                        "startTime": segment.startTime,
+                        "endTime": segment.endTime,
+                        "text": segment.text,
+                    ]
+                    if let speaker = segment.speaker {
+                        segDict["speaker"] = speaker
+                    }
+                    return segDict
+                }
+            }
         }
 
         if !recording.summaries.isEmpty {
@@ -118,10 +153,16 @@ struct ExportView: View {
             }
         }
 
-        guard let data = try? JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted),
+        guard let data = try? JSONSerialization.data(withJSONObject: dict, options: [.prettyPrinted, .sortedKeys]),
               let string = String(data: data, encoding: .utf8) else {
             return "{}"
         }
         return string
+    }
+
+    private func formatTimestamp(_ seconds: TimeInterval) -> String {
+        let mins = Int(seconds) / 60
+        let secs = Int(seconds) % 60
+        return String(format: "%d:%02d", mins, secs)
     }
 }

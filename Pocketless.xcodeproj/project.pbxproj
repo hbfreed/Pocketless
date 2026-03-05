@@ -32,6 +32,7 @@
 		C2137CF88E7EB8BA216D13AE /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52BA24DB6322DF880C48CA16 /* WhisperKit */; };
 		DD4651559FD3B5BEFBD13C45 /* STTConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2551B44A051B14349879CA54 /* STTConfigView.swift */; };
 		DFC8CBBD86DB63BC9DB6CF55 /* SummarizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA187DC0D88A4F9E8C6365E /* SummarizationService.swift */; };
+		E06BFAB383FC843026450118 /* TestTranscriptLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D9D677B7D2702E16153E77 /* TestTranscriptLoader.swift */; };
 		E08FC61715C1FAB68A372FD5 /* CleanupPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1B8791563BF68F459A0BF8 /* CleanupPrompt.swift */; };
 		E5E21F79B812520F18F60B3A /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527AFE9F80F2C1C13B5AE89F /* RecordingView.swift */; };
 		F5034A6C3730E8BFF67D4FF9 /* SummaryPresets.json in Resources */ = {isa = PBXBuildFile; fileRef = 50D4ADAA15213BD798A75208 /* SummaryPresets.json */; };
@@ -55,6 +56,7 @@
 		563703DC8544263FDC218BE4 /* AnthropicClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnthropicClient.swift; sourceTree = "<group>"; };
 		6AC211CDBE2017D51843F334 /* OpenAICompatibleClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAICompatibleClient.swift; sourceTree = "<group>"; };
 		6BE9D57BAB0DFE5F20BA883B /* SummaryPresets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryPresets.swift; sourceTree = "<group>"; };
+		70D9D677B7D2702E16153E77 /* TestTranscriptLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTranscriptLoader.swift; sourceTree = "<group>"; };
 		78169C7F64D2E6BE195D2F7F /* TranscriptCleanup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptCleanup.swift; sourceTree = "<group>"; };
 		812A1CF52689796FE3F585B3 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
 		82D377A7A0220D4A728F389E /* LLMConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMConfigView.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				82D377A7A0220D4A728F389E /* LLMConfigView.swift */,
 				1E89DBB52E3CBC2DCC2CB146 /* SettingsView.swift */,
 				2551B44A051B14349879CA54 /* STTConfigView.swift */,
+				70D9D677B7D2702E16153E77 /* TestTranscriptLoader.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				DFC8CBBD86DB63BC9DB6CF55 /* SummarizationService.swift in Sources */,
 				501C9A5720D1F0141B44466E /* Summary.swift in Sources */,
 				96B4432CF067CC0D38A8265F /* SummaryPresets.swift in Sources */,
+				E06BFAB383FC843026450118 /* TestTranscriptLoader.swift in Sources */,
 				95272D8497F4CDA47AA36748 /* Transcript.swift in Sources */,
 				744F1EFBFDC4E211A8497747 /* TranscriptCleanup.swift in Sources */,
 				7617C8B5F4DA137439C2F7D7 /* TranscriptionService.swift in Sources */,
