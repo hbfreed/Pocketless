@@ -3,7 +3,7 @@ import SwiftUI
 struct SettingsView: View {
     @AppStorage("cleanupEnabled") private var cleanupEnabled = true
     @AppStorage("autoSummarize") private var autoSummarize = false
-    @AppStorage("defaultPreset") private var defaultPreset = "quick"
+    @AppStorage("defaultPreset") private var defaultPreset = "fast"
     @State private var storageUsage: String = "Calculating..."
 
     var body: some View {
@@ -24,12 +24,6 @@ struct SettingsView: View {
                 Section("Processing") {
                     Toggle("Transcript Cleanup", isOn: $cleanupEnabled)
                     Toggle("Auto-Summarize", isOn: $autoSummarize)
-
-                    Picker("Default Preset", selection: $defaultPreset) {
-                        ForEach(SummaryPreset.allCases.filter { $0 != .custom }) { preset in
-                            Text(preset.displayName).tag(preset.rawValue)
-                        }
-                    }
                 }
 
                 Section("Storage") {

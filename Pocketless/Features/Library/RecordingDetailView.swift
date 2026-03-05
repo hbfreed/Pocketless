@@ -260,9 +260,7 @@ struct RecordingDetailView: View {
                                 .foregroundStyle(.secondary)
                         }
 
-                        Text(summary.content)
-                            .font(.body)
-                            .textSelection(.enabled)
+                        MarkdownTextView(content: summary.content)
                     }
                     .padding()
                     .background(.fill.quaternary)
@@ -450,5 +448,23 @@ struct TranscriptTextView: View {
         let minutes = Int(time) / 60
         let seconds = Int(time) % 60
         return String(format: "%d:%02d", minutes, seconds)
+    }
+}
+
+// MARK: - Markdown Summary View
+
+struct MarkdownTextView: View {
+    let content: String
+
+    var body: some View {
+        if let attributed = try? AttributedString(markdown: content, options: .init(interpretedSyntax: .inlineOnlyPreservingWhitespace)) {
+            Text(attributed)
+                .font(.body)
+                .textSelection(.enabled)
+        } else {
+            Text(content)
+                .font(.body)
+                .textSelection(.enabled)
+        }
     }
 }

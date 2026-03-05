@@ -1,14 +1,6 @@
 import Foundation
 
 final class SummarizationService {
-    private static let rules = """
-    Rules:
-    - Use only information present in the transcript. Do not infer or fabricate.
-    - If speaker labels are available, attribute statements to speakers.
-    - Flag anything that seems ambiguous or unclear in the transcript.
-    - Use the user's language (match the transcript language).
-    """
-
     func summarize(
         transcript: Transcript,
         preset: SummaryPreset,
@@ -28,28 +20,26 @@ final class SummarizationService {
             systemPrompt = preset.systemPrompt
         }
 
-        let fullPrompt = """
-        \(systemPrompt)
-
-        \(Self.rules)
-
-        Transcript:
-        ---
-        \(transcript.fullText)
-        ---
-        """
+        // Use preset's model on OpenRouter, otherwise fall back to configured model
+        let model: String
+        if config.providerType == .openRouter, let presetModel = preset.openRouterModel {
+            model = presetModel
+        } else {
+            model = config.modelName
+        }
 
         let content = try await provider.chatCompletion(
-            model: config.modelName,
-            systemPrompt: fullPrompt,
-            userMessage: "Please summarize the transcript above.",
-            maxTokens: config.maxTokens
+            model: model,
+            systemPrompt: systemPrompt,
+            userMessage: transcript.fullText,
+            maxTokens: config.maxTokens,
+            temperature: 0.3
         )
 
         return Summary(
             presetUsed: preset.rawValue,
             customPrompt: preset == .custom ? customPrompt : nil,
-            modelUsed: config.modelName,
+            modelUsed: model,
             content: content
         )
     }

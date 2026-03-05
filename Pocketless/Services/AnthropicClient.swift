@@ -8,13 +8,15 @@ struct AnthropicClient: LLMProvider {
         model: String,
         systemPrompt: String,
         userMessage: String,
-        maxTokens: Int
+        maxTokens: Int,
+        temperature: Double = 0.3
     ) async throws -> String {
         let url = baseURL.appendingPathComponent("v1/messages")
 
         let body: [String: Any] = [
             "model": model,
             "max_tokens": maxTokens,
+            "temperature": temperature,
             "system": systemPrompt,
             "messages": [
                 ["role": "user", "content": userMessage],

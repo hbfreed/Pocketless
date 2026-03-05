@@ -39,13 +39,15 @@ struct OpenAICompatibleClient {
         model: String,
         systemPrompt: String,
         userMessage: String,
-        maxTokens: Int = 4096
+        maxTokens: Int = 4096,
+        temperature: Double = 0.3
     ) async throws -> String {
         let url = baseURL.appendingPathComponent("chat/completions")
 
         let body: [String: Any] = [
             "model": model,
             "max_tokens": maxTokens,
+            "temperature": temperature,
             "messages": [
                 ["role": "system", "content": systemPrompt],
                 ["role": "user", "content": userMessage],
